@@ -3,5 +3,5 @@ import react from "@vitejs/plugin-react"
 
 export default defineConfig({
   plugins: [react()],
-  base: '/bluebelldisplay/'   // 👈 EXACT GitHub repo name
+  base: '/'   //Custom domain
 })
