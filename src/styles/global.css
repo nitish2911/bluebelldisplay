@@ -499,3 +499,136 @@ html {
   opacity: 1;
 }
 
+/* ===== PROJECTS ===== */
+
+.projects {
+  padding: 7rem 8vw;
+  background: var(--primary);
+}
+
+.projects-subtitle {
+  max-width: 600px;
+  color: var(--text-secondary);
+  margin-bottom: 4rem;
+}
+
+.projects-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.project-card {
+  background: rgba(255,255,255,0.04);
+  border-radius: 24px;
+  overflow: hidden;
+}
+
+/* 🔥 IMAGE SECTION — BIG & DOMINANT */
+.project-images {
+  display: flex;
+  gap: 1rem;
+  padding: 1.5rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+}
+
+.project-images img {
+  height: 320px;              /* MAIN SIZE FIX */
+  min-width: 420px;
+  object-fit: cover;
+  border-radius: 16px;
+  scroll-snap-align: start;
+}
+
+/* INFO */
+.project-info {
+  padding: 2rem;
+}
+
+.project-category {
+  font-size: 0.85rem;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.project-info h3 {
+  margin-top: 0.6rem;
+  font-size: 1.4rem;
+}
+
+/* ===== LIGHTBOX ===== */
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.9);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 12px;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+}
+
+.lightbox-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 3rem;
+  color: white;
+  cursor: pointer;
+  user-select: none;
+}
+
+.lightbox-nav.left {
+  left: 30px;
+}
+
+.lightbox-nav.right {
+  right: 30px;
+}
+
+/* ===== IMAGE HINT OVERLAY ===== */
+
+.project-image-wrapper {
+  position: relative;
+  cursor: pointer;
+}
+
+.project-image-wrapper img {
+  display: block;
+}
+
+.image-hint {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.35);
+  color: #fff;
+  font-size: 0.95rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  border-radius: 16px;
+}
+
+.project-image-wrapper:hover .image-hint {
+  opacity: 1;
+}
+

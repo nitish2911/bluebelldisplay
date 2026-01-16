@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import logo from "../assets/images/logo.png"
+import logo from "../assets/images/logo_new.png"
 
 export default function Navbar() {
   const [sticky, setSticky] = useState(false)
